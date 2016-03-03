@@ -11,7 +11,7 @@ writer.writeheader()
 
 for row in reader:
     row['first_name'] = row['first_name'].upper()
-    row['city'] = row['city'].replace('&nbsp;','')
+    row['city'] = row['city'].replace('&nbsp;',' ')
     row['zip'] = row['zip'].zfill(5)
     if float(row['amount']) > 1000.0:
         print row
